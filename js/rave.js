@@ -3,9 +3,6 @@ var shouldRun = false;
 var counts = 0;
 
 $(document).ready(function() {
-	
-	$(".warning").hide("slow");
-	
 	document.getElementById('rave-music').currentTime = 35; //35
 	$('.content').click(function() {
 		if (!once) {
@@ -45,6 +42,7 @@ function rave() {
 function count() {
 	if (shouldRun) {
 		counts++;
+		$(".warning").hide();
 		if (counts == 1000) {
 			$(".content img").css('visibility', 'visible');
 			document.getElementById('rave-music').pause();
@@ -57,5 +55,7 @@ function count() {
 			document.getElementById('scream').currentTime = 14.25;
 			document.getElementById('scream').pause();
 		}	
+	} else {
+		$(".warning").show();
 	}
 }
