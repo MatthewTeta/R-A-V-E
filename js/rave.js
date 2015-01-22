@@ -3,6 +3,9 @@ var shouldRun = false;
 var counts = 0;
 
 $(document).ready(function() {
+	
+	$(".warning").hide("slow");
+	
 	document.getElementById('rave-music').currentTime = 35; //35
 	$('.content').click(function() {
 		if (!once) {
