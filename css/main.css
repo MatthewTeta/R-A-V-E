@@ -19,3 +19,10 @@ body {
 	width: 100%;
 	height: 100%;
 }
+
+.warning {
+	visibility: visible;
+	font-size: 50%;
+	margin: auto;
+	padding: 0;
+}
